@@ -24,13 +24,13 @@ const FindMyImpact = (props) => {
   };
 
   return (
-    <div className="container mt-5">
+    <div className="container my-5">
       <h2 className="mb-5">Find My Impact </h2>
       {state.questions.map((question) => (
         <div key={question.id}>
-          <div className="row question">
-            <div className="col-6">
-              <h5 className="mt-3">{question.text}</h5>
+          <div className="row question mt-3">
+            <div className="col-sm-5">
+              <h5>{question.text}</h5>
               {question.options.map((option) => (
                 <RadioButton
                   id={`${question.id.toString()}-${option.id.toString()}`}
@@ -42,16 +42,51 @@ const FindMyImpact = (props) => {
                 />
               ))}
             </div>
-            <div className="col-6">
+            <div className="col-sm-4">
               <PieChart
                 id={question.id}
                 options={question.options}
                 selectedOption={Number(question.selectedOption) - 1}
               />
             </div>
+            {question.selectedOption != "-1" ? (
+              <>
+                <div className="col-sm-3 pt-3">
+                  <p>
+                    Just so you know, average is{" "}
+                    <strong>{question.average}</strong>.
+                  </p>
+                  <p>
+                    Do you know, over the course of an year, it would amount to
+                    creating{" "}
+                    <strong>
+                      {
+                        question.options.find(
+                          (o) => o.id === question.selectedOption
+                        ).co2
+                      }{" "}
+                    </strong>
+                    kg of CO2.
+                  </p>
+                </div>
+              </>
+            ) : (
+              <></>
+            )}
           </div>
         </div>
       ))}
+      <div className="row">
+        <div className="col-6">
+          <button
+            type="button"
+            class="btn btn-warning btn-lg float-right"
+            onclick="start()"
+          >
+            Submit
+          </button>
+        </div>
+      </div>
     </div>
   );
 };

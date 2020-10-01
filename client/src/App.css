@@ -41,5 +41,10 @@
   min-height: 200px;
 }
 .pie-chart {
+  width: 200px;
   height: 200px;
+}
+
+body {
+  color: darkslateblue;
 }

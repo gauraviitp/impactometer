@@ -15,10 +15,11 @@ function drawChart(optionsData, selectedOption, id) {
   data.addRows(points);
 
   var options = {
+    title: "All responses",
     legend: "none",
     pieSliceText: "label",
     slices: {
-      [selectedOption]: { offset: 0.3 },
+      [selectedOption]: { offset: 0.2 },
     },
   };
 
