@@ -24,8 +24,8 @@ const FindMyImpact = (props) => {
   };
 
   return (
-    <div className="container-fluid mt-5">
-      <h2>Find My Impact </h2>
+    <div className="container mt-5">
+      <h2 className="mb-5">Find My Impact </h2>
       {state.questions.map((question) => (
         <div key={question.id}>
           <div className="row question">

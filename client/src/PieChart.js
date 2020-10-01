@@ -15,7 +15,6 @@ function drawChart(optionsData, selectedOption, id) {
   data.addRows(points);
 
   var options = {
-    title: "",
     legend: "none",
     pieSliceText: "label",
     slices: {
