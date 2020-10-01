@@ -36,3 +36,10 @@
     transform: rotate(360deg);
   }
 }
+
+.question {
+  min-height: 200px;
+}
+.pie-chart {
+  height: 200px;
+}

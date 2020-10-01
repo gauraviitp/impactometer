@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import RadioButton from "./components/RadioButton";
 import AppState from "./AppState";
+import PieChart from "./PieChart";
 
 const FindMyImpact = (props) => {
   const initState = AppState;
@@ -25,24 +26,32 @@ const FindMyImpact = (props) => {
   return (
     <div className="container-fluid mt-5">
       <h2>Find My Impact </h2>
-      <div className="col-6">
-        {state.questions.map((question) => (
-          <div key={question.id}>
-            <h5 className="mt-3">{question.text}</h5>
-            {question.options.map((option) => (
-              <RadioButton
-                id={`${question.id.toString()}-${option.id.toString()}`}
-                key={`${question.id.toString()}-${option.id.toString()}`}
-                onSelection={() => onSelection(question.id, option.id)}
-                checked={question.selectedOption === option.id}
-                labelText={option.text}
-                value={option.id}
+      {state.questions.map((question) => (
+        <div key={question.id}>
+          <div className="row question">
+            <div className="col-6">
+              <h5 className="mt-3">{question.text}</h5>
+              {question.options.map((option) => (
+                <RadioButton
+                  id={`${question.id.toString()}-${option.id.toString()}`}
+                  key={`${question.id.toString()}-${option.id.toString()}`}
+                  onSelection={() => onSelection(question.id, option.id)}
+                  checked={question.selectedOption === option.id}
+                  labelText={option.text}
+                  value={option.id}
+                />
+              ))}
+            </div>
+            <div className="col-6">
+              <PieChart
+                id={question.id}
+                options={question.options}
+                selectedOption={Number(question.selectedOption) - 1}
               />
-            ))}
+            </div>
           </div>
-        ))}
-      </div>
-      <div className="col-6"></div>
+        </div>
+      ))}
     </div>
   );
 };

@@ -4,24 +4,24 @@ const AppState = {
       id: "1",
       text: "How many people live in your household?",
       options: [
-        { id: "1", text: "1" },
-        { id: "2", text: "2" },
-        { id: "3", text: "3" },
-        { id: "4", text: "4" },
-        { id: "5", text: "5+" },
+        { id: "1", text: "1", percentage: 20 },
+        { id: "2", text: "2", percentage: 20 },
+        { id: "3", text: "3", percentage: 20 },
+        { id: "4", text: "4", percentage: 20 },
+        { id: "5", text: "5+", percentage: 20 },
       ],
-      selectedOption: "1",
+      selectedOption: "-1",
     },
     {
       id: "2",
       text: "On average how many cups of tea/coffee do you have a day?",
       options: [
-        { id: "1", text: "none" },
-        { id: "2", text: "1 - 3" },
-        { id: "3", text: "4 - 6" },
-        { id: "4", text: "7+" },
+        { id: "1", text: "none", percentage: 25 },
+        { id: "2", text: "1 - 3", percentage: 25 },
+        { id: "3", text: "4 - 6", percentage: 25 },
+        { id: "4", text: "7+", percentage: 25 },
       ],
-      selectedOption: "1",
+      selectedOption: "-1",
     },
     {
       id: "3",
@@ -32,7 +32,7 @@ const AppState = {
         { id: "3", text: "4 - 6" },
         { id: "4", text: "7+" },
       ],
-      selectedOption: "1",
+      selectedOption: "-1",
     },
     {
       id: "4",
@@ -43,7 +43,7 @@ const AppState = {
         { id: "3", text: "4 - 6" },
         { id: "4", text: "7+" },
       ],
-      selectedOption: "1",
+      selectedOption: "-1",
     },
     {
       id: "5",
@@ -54,7 +54,7 @@ const AppState = {
         { id: "3", text: "4 - 6" },
         { id: "4", text: "7+" },
       ],
-      selectedOption: "1",
+      selectedOption: "-1",
     },
     {
       id: "6",
@@ -66,7 +66,7 @@ const AppState = {
         { id: "4", text: "77 - 196" },
         { id: "5", text: "196+" },
       ],
-      selectedOption: "1",
+      selectedOption: "-1",
     },
     {
       id: "7",
@@ -75,7 +75,7 @@ const AppState = {
         { id: "1", text: "yes" },
         { id: "2", text: "no" },
       ],
-      selectedOption: "1",
+      selectedOption: "-1",
     },
     {
       id: "8",
@@ -87,7 +87,7 @@ const AppState = {
         { id: "4", text: "7 - 9" },
         { id: "5", text: "10+" },
       ],
-      selectedOption: "1",
+      selectedOption: "-1",
     },
     {
       id: "9",
@@ -99,7 +99,7 @@ const AppState = {
         { id: "4", text: "7 - 9" },
         { id: "5", text: "10+" },
       ],
-      selectedOption: "1",
+      selectedOption: "-1",
     },
     {
       id: "10",
@@ -110,7 +110,7 @@ const AppState = {
         { id: "3", text: "3 - 4" },
         { id: "4", text: "5+" },
       ],
-      selectedOption: "1",
+      selectedOption: "-1",
     },
     {
       id: "11",
@@ -121,7 +121,7 @@ const AppState = {
         { id: "3", text: "3 - 4" },
         { id: "4", text: "5+" },
       ],
-      selectedOption: "1",
+      selectedOption: "-1",
     },
     {
       id: "12",
@@ -132,7 +132,7 @@ const AppState = {
         { id: "3", text: "3 - 4" },
         { id: "4", text: "5+" },
       ],
-      selectedOption: "1",
+      selectedOption: "-1",
     },
     {
       id: "13",
@@ -150,7 +150,7 @@ const AppState = {
         { id: "9", text: "9" },
         { id: "10", text: "10" },
       ],
-      selectedOption: "1",
+      selectedOption: "-1",
     },
 
     {
@@ -169,7 +169,7 @@ const AppState = {
         { id: "9", text: "9" },
         { id: "10", text: "10" },
       ],
-      selectedOption: "1",
+      selectedOption: "-1",
     },
   ],
 };
