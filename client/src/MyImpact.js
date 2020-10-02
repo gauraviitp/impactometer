@@ -11,7 +11,7 @@ const MyImpact = (props) => {
               Thank you for taking the time to understand your carbon footprint
             </div>
             <div className="carbon-footprint-label">
-              Your carbon footprint is:
+              Your carbon footprint, for the questions asked, is:
             </div>
             <div className="carbon-footprint-results">
               <div className="carbon-footprint-number">
@@ -19,10 +19,10 @@ const MyImpact = (props) => {
               </div>
               <div className="carbon-footprint-text">Kg CO2/YEAR</div>
               <div className="carbon-comparison">
-                Thats{" "}
+                For the questions answered, thats{" "}
                 <strong>{Math.round(Math.abs(props.percentageBetter))}%</strong>{" "}
-                {props.percentageBetter <= 0 ? "better" : "worse"} than the rest
-                of SSE and OVO combined!
+                {props.percentageBetter <= 0 ? "better" : "worse"} than the
+                average of SSE and OVO responses!
               </div>
             </div>
           </div>
