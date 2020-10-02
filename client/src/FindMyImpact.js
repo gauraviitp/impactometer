@@ -25,10 +25,13 @@ const FindMyImpact = (props) => {
     setState(
       Object.assign({}, state, {
         questions,
-        currentQuestionId: ((Number(questionId) + 1) % 15 == 0
-          ? 1
-          : (Number(questionId) + 1) % 15
-        ).toString(),
+        currentQuestionId:
+          Number(questionId) == 14
+            ? "14"
+            : ((Number(questionId) + 1) % 15 == 0
+                ? 1
+                : (Number(questionId) + 1) % 15
+              ).toString(),
       })
     );
   };
@@ -109,9 +112,9 @@ const FindMyImpact = (props) => {
             </div>
           ) : (
             <MyImpact
-              image={"/images/positive-result.svg"}
-              percentageBetter={70.8}
-              carbonFootprint={40.8}
+              image={state.image}
+              percentageBetter={state.percentageBetterThan}
+              carbonFootprint={state.carbonFootPrint}
             ></MyImpact>
           )}
         </div>
