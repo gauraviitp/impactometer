@@ -44,43 +44,50 @@ const FindMyImpact = (props) => {
   );
 
   return (
-    <div className="container">
-      <div className="row rectangle">
-        <div className="col-lg-6">
-          <div className="question">
-            <h3 className="group-text">{question.groupText}</h3>
-            <h4 className="question-text">{question.text}</h4>
-            <div className="option-group">
-              {question.options.map((option) => (
-                <RadioButton
-                  id={`${question.id.toString()}-${option.id.toString()}`}
-                  key={`${question.id.toString()}-${option.id.toString()}`}
-                  onSelection={() => onSelection(question.id, option.id)}
-                  checked={question.selectedOption === option.id}
-                  labelText={option.text}
-                  value={option.id}
-                />
-              ))}
+    <>
+      <div className="header">
+        <img className="logo" src="images/sse logo.png" alt="sse icon" />
+      </div>
+      <div className="body-background">
+        <div className="container rectangle">
+          <div className="row">
+            <div className="col-lg-6">
+              <div className="question">
+                <h3 className="group-text">{question.groupText}</h3>
+                <h4 className="question-text">{question.text}</h4>
+                <div className="option-group">
+                  {question.options.map((option) => (
+                    <RadioButton
+                      id={`${question.id.toString()}-${option.id.toString()}`}
+                      key={`${question.id.toString()}-${option.id.toString()}`}
+                      onSelection={() => onSelection(question.id, option.id)}
+                      checked={question.selectedOption === option.id}
+                      labelText={option.text}
+                      value={option.id}
+                    />
+                  ))}
+                </div>
+                <div
+                  className="previous-question"
+                  type="button"
+                  onClick={goToPrevious}
+                >
+                  Previous question
+                </div>
+              </div>
             </div>
-            <div
-              className="previous-question"
-              type="button"
-              onClick={goToPrevious}
-            >
-              Previous question
-            </div>
-          </div>
-        </div>
-        <div className="col-lg-6">
-          <div className="image-section">
-            <img className="image" src={question.image} alt="" />
-            <div className="tip-heading">{question.tipHeading}</div>
+            <div className="col-lg-6">
+              <div className="image-section">
+                <img className="image" src={question.image} alt="" />
+                <div className="tip-heading">{question.tipHeading}</div>
 
-            <div className="tip-text">{question.tipText}</div>
+                <div className="tip-text">{question.tipText}</div>
+              </div>
+            </div>
           </div>
         </div>
       </div>
-    </div>
+    </>
   );
 };
 
