@@ -56,6 +56,7 @@ const FindMyImpact = (props) => {
     let footprint = 0;
     console.log(state.questions);
     for (let question of state.questions) {
+      if (question.id === "1") continue;
       if (question.selectedOption !== "-1") {
         let option = question.options.find(
           (o) => o.id === question.selectedOption
@@ -64,13 +65,15 @@ const FindMyImpact = (props) => {
       }
     }
 
-    let betterThan = Math.floor(Math.random() * 100 + 1);
+    let usageWrtOthers = (footprint - 1800) / 18;
+
     let image = "/images/positive-result.svg";
 
-    if (betterThan <= 60 && betterThan > 40) {
+    if (usageWrtOthers < 10 && usageWrtOthers > -10) {
       image = "/images/static-result.svg";
     }
-    if (betterThan <= 40) {
+
+    if (usageWrtOthers >= 10) {
       image = "/images/negative-result.svg";
     }
 
@@ -78,7 +81,7 @@ const FindMyImpact = (props) => {
       Object.assign({}, state, {
         carbonFootPrint: Math.round(footprint),
         submitted: true,
-        percentageBetterThan: betterThan,
+        percentageBetterThan: usageWrtOthers,
         image,
       })
     );
