@@ -25,6 +25,7 @@ const FindMyImpact = (props) => {
 
   return (
     <div className="container my-5">
+      <div class="topbar"> </div>
       <h1 className="mb-5">Find My Impact </h1>
       <h3>This is some opening text </h3>
       {state.questions.map((question) => (
