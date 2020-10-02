@@ -76,7 +76,7 @@ const FindMyImpact = (props) => {
 
     setState(
       Object.assign({}, state, {
-        carbonFootPrint: footprint,
+        carbonFootPrint: Math.round(footprint),
         submitted: true,
         percentageBetterThan: betterThan,
         image,
