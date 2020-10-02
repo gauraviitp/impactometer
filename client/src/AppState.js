@@ -1,5 +1,6 @@
 const AppState = {
   currentQuestionId: "1",
+  submitted: true,
   questions: [
     // {
     //   id: "0",
@@ -33,9 +34,9 @@ const AppState = {
       average: 3.5,
       mostPopular: 3,
       groupText: "What you use",
-      tipHeading:
-        "Did you know the average Co2 per person is 8340kg?",
-      tipText: "We're not saying give a family member away, it's just an interesting stat",
+      tipHeading: "Did you know the average Co2 per person is 8340kg?",
+      tipText:
+        "We're not saying give a family member away, it's just an interesting stat",
       image: "/images/what you use.svg",
     },
     {
@@ -45,7 +46,7 @@ const AppState = {
       options: [
         { id: "1", text: "none", percentage: 25, co2: 0 },
         { id: "2", text: "1 - 3", percentage: 25, co2: 54.75 },
-        { id: "3", text: "4 - 6", percentage: 25, co2: 109.50 },
+        { id: "3", text: "4 - 6", percentage: 25, co2: 109.5 },
         { id: "4", text: "7+", percentage: 25, co2: 127.75 },
       ],
       selectedOption: "-1",
@@ -64,7 +65,7 @@ const AppState = {
       options: [
         { id: "1", text: "none", percentage: 25, co2: 0 },
         { id: "2", text: "1 - 3", percentage: 25, co2: 63.65 },
-        { id: "3", text: "4 - 6", percentage: 25, co2: 127.30 },
+        { id: "3", text: "4 - 6", percentage: 25, co2: 127.3 },
         { id: "4", text: "7+", percentage: 25, co2: 148.51 },
       ],
       selectedOption: "-1",
@@ -146,7 +147,8 @@ const AppState = {
       groupText: "Around the home",
       tipHeading:
         "By reducing your thermostat by just 1 degree can save 433kg Co2 a year! And if you don't have a theromstat well who knows how much you could save!!!",
-      tipText: "That's the same as driving the safer scenic route from Land’s End to John O’Groats!",
+      tipText:
+        "That's the same as driving the safer scenic route from Land’s End to John O’Groats!",
       image: "/images/around the home.svg",
     },
     {
@@ -155,10 +157,10 @@ const AppState = {
         "Nelly said 'It's gettin' hot in here'....but seriously though, how many halogen bulbs does your crib have?",
       options: [
         { id: "1", text: "none", percentage: 20, co2: 0 },
-        { id: "2", text: "1 - 3", percentage: 20, co2: 378.00 },
-        { id: "3", text: "4 - 6", percentage: 20, co2: 756.00 },
-        { id: "4", text: "7 - 9", percentage: 20, co2: 1134.00 },
-        { id: "5", text: "10+", percentage: 20, co2: 1260.00 },
+        { id: "2", text: "1 - 3", percentage: 20, co2: 378.0 },
+        { id: "3", text: "4 - 6", percentage: 20, co2: 756.0 },
+        { id: "4", text: "7 - 9", percentage: 20, co2: 1134.0 },
+        { id: "5", text: "10+", percentage: 20, co2: 1260.0 },
       ],
       selectedOption: "-1",
       average: 4.5,
@@ -166,7 +168,8 @@ const AppState = {
       groupText: "Around the home",
       tipHeading:
         "You've felt a halogen bulb right, that heat comes from somewhere, and in return creates 0.345kg of Co2 per bulb for an 8hr day",
-      tipText: "A coal fired power station would use 172g of coal to power just one bulb",
+      tipText:
+        "A coal fired power station would use 172g of coal to power just one bulb",
       image: "/images/around the home.svg",
     },
     {
@@ -183,8 +186,7 @@ const AppState = {
       average: 4.5,
       mostPopular: 3,
       groupText: "Around the home",
-      tipHeading:
-        "You're already smashing it",
+      tipHeading: "You're already smashing it",
       tipText: "No nagging, just a good ol' High 5 for you!",
       image: "/images/around the home.svg",
     },
@@ -204,7 +206,8 @@ const AppState = {
       groupText: "Electronics",
       tipHeading:
         "A lot of people leave them charging overnight, but the phone, when plugged in, will still be running background tasks like checking emails, twitter etc.",
-      tipText: "Stopping the overnight charging could save 2kg of coal per phone, that doesn't include playing candy crush though",
+      tipText:
+        "Stopping the overnight charging could save 2kg of coal per phone, that doesn't include playing candy crush though",
       image: "/images/electronics.svg",
     },
     {
@@ -213,7 +216,7 @@ const AppState = {
         "How many tablets does your household have? We don't mean the prescription kind, they don't count!",
       options: [
         { id: "1", text: "none", percentage: 25, co2: 0 },
-        { id: "2", text: "1 - 2", percentage: 25, co2: 7.30 },
+        { id: "2", text: "1 - 2", percentage: 25, co2: 7.3 },
         { id: "3", text: "3 - 4", percentage: 25, co2: 14.61 },
         { id: "4", text: "5+", percentage: 25, co2: 18.26 },
       ],
@@ -223,7 +226,8 @@ const AppState = {
       groupText: "Electronics",
       tipHeading:
         "These are a classic for overnight charging in lots of households!",
-      tipText: "Stopping the overnight charging is the same as as 9 miles of average car driving a year",
+      tipText:
+        "Stopping the overnight charging is the same as as 9 miles of average car driving a year",
       image: "/images/electronics.svg",
     },
     {
@@ -242,7 +246,8 @@ const AppState = {
       groupText: "Electronics",
       tipHeading:
         "Ok, maybe not now we're all home working, but an overnight charge can result in a weighty 13.3kg of wasted Co2 a year",
-      tipText: "Shut down when not needed, not just lock it or close the lid, you'll not only reduce your Co2 but also your energy bill",
+      tipText:
+        "Shut down when not needed, not just lock it or close the lid, you'll not only reduce your Co2 but also your energy bill",
       image: "/images/electronics.svg",
     },
     {
@@ -267,7 +272,8 @@ const AppState = {
       groupText: "What you use",
       tipHeading:
         "Did you know the average household wastes £80 each year through leaving appliances on standby",
-      tipText: "Turning off appliances when not in use could save 346kg Co2 per year, that's the same amount of carbon that 16 trees absorb in a year!",
+      tipText:
+        "Turning off appliances when not in use could save 346kg Co2 per year, that's the same amount of carbon that 16 trees absorb in a year!",
       image: "/images/what you use.svg",
     },
     {
@@ -282,7 +288,7 @@ const AppState = {
         { id: "5", text: "5", percentage: 10, co2: 15.48 },
         { id: "6", text: "6", percentage: 10, co2: 19.36 },
         { id: "7", text: "7", percentage: 10, co2: 23.23 },
-        { id: "8", text: "8", percentage: 10, co2: 27.10 },
+        { id: "8", text: "8", percentage: 10, co2: 27.1 },
         { id: "9", text: "9", percentage: 10, co2: 30.97 },
         { id: "10", text: "10", percentage: 10, co2: 34.84 },
       ],
@@ -292,7 +298,8 @@ const AppState = {
       groupText: "In the kitchen",
       tipHeading:
         "A bit harder to calculate, but if each meal was averaged it'd work out to be 70g of Co2 wasted, not to mention the waste of good food",
-      tipText: "Try being more creative and use those items before the spoil, with great resources online it's never been easier to try your culinary skills",
+      tipText:
+        "Try being more creative and use those items before the spoil, with great resources online it's never been easier to try your culinary skills",
       image: "/images/in the kitchen.svg",
     },
   ],
