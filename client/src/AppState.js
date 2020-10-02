@@ -3,7 +3,6 @@ const AppState = {
   questions: [
     {
       id: "0",
-      groupText: "In the kitchen",
       text: "How many times a week do you run your dishwasher?",
       options: [
         { id: "1", text: "none", percentage: 20, co2: 10 },
@@ -14,6 +13,7 @@ const AppState = {
       selectedOption: "-1",
       average: 3.5,
       mostPopular: 3,
+      groupText: "In the kitchen",
       tipHeading:
         "Did you know that it takes 0.46 kg Co2 to run a dishwasher for one cycle",
       tipText: "That's more than one tree can absorb in a year!",
@@ -21,7 +21,6 @@ const AppState = {
     },
     {
       id: "1",
-      groupText: "In the kitchen",
       text: "How many people live in your household?",
       options: [
         { id: "1", text: "1", percentage: 20, co2: 10 },
@@ -33,6 +32,7 @@ const AppState = {
       selectedOption: "-1",
       average: 3.5,
       mostPopular: 3,
+      groupText: "In the kitchen",
       tipHeading:
         "Did you know that it takes 0.96 kg Co2 to run a dishwasher for one cycle",
       tipText: "That's more than one tree can absorb in a year!",
