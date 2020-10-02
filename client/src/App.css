@@ -46,14 +46,13 @@
 
 body {
   font-size: 16px;
-  background-color: #282c34;
 }
 
 .rectangle {
   background: rgba(255, 255, 255, 0.9);
   backdrop-filter: blur(14px);
   border-radius: 18px;
-  margin: 100px auto 100px auto;
+  margin: 70px auto 80px auto;
   max-width: 90%;
 }
 
@@ -78,7 +77,7 @@ color: #004687;
 }
 
 .question-text {
-  /*font-family: Museo Sans Rounded;*/
+font-family: Museo Sans Rounded;
 font-style: normal;
 font-weight: normal;
 font-size: 24px;
@@ -88,7 +87,7 @@ color: #004687;
 }
 
 .option {
-  /*font-family: Museo Sans Rounded;*/
+  font-family: Museo Sans Rounded;
 font-style: normal;
 font-weight: 500;
 font-size: 16px;
@@ -144,5 +143,51 @@ text-decoration-line: underline;
 color: #2875B2;
 }
 
+.header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #FFFFFF;
+  height: 80px;
+}
 
+.logo {
+  height: 50px;
+}
+
+.body-background {
+  background-image: url("/images/sebastian-unrau-sp-p7uuT0tw-unsplash.jpg") ;
+  background-size: cover;
+  overflow: auto;
+}
+
+@font-face {
+  font-family: Museo Sans;
+  font-weight: 100;
+  src: url("/fonts/MuseoSans_100.otf") format("opentype");
+}
+
+@font-face {
+  font-family: Museo Sans Rounded;
+  font-weight: 300;
+  src: url("/fonts/MuseoSansRounded-300.otf") format("opentype");
+}
+
+@font-face {
+  font-family: Museo Sans Rounded;
+  font-weight: 500;
+  src: url("/fonts/MuseoSansRounded-500.otf") format("opentype");
+}
+
+@font-face {
+  font-family: Museo Sans Rounded;
+  font-weight: 700;
+  src: url("/fonts/MuseoSansRounded-700.otf") format("opentype");
+}
+
+@font-face {
+  font-family: Museo Sans Rounded;
+  font-weight: 900;
+  src: url("/fonts/MuseoSansRounded-900.otf") format("opentype");
+}
 
