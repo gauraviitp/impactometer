@@ -53,7 +53,35 @@ const FindMyImpact = (props) => {
 
   const handleSubmit = () => {
     console.log("handle submit");
-    setState(Object.assign({}, state, { submitted: true }));
+    let footprint = 0;
+    console.log(state.questions);
+    for (let question of state.questions) {
+      if (question.selectedOption !== "-1") {
+        let option = question.options.find(
+          (o) => o.id === question.selectedOption
+        );
+        footprint += option.co2;
+      }
+    }
+
+    let betterThan = Math.floor(Math.random() * 100 + 1);
+    let image = "/images/positive-result.svg";
+
+    if (betterThan <= 60 && betterThan > 40) {
+      image = "/images/static-result.svg";
+    }
+    if (betterThan <= 40) {
+      image = "/images/negative-result.svg";
+    }
+
+    setState(
+      Object.assign({}, state, {
+        carbonFootPrint: footprint,
+        submitted: true,
+        percentageBetterThan: betterThan,
+        image,
+      })
+    );
   };
 
   return (
