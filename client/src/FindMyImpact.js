@@ -48,6 +48,11 @@ const FindMyImpact = (props) => {
     (o) => o.id === state.currentQuestionId
   );
 
+  const handleSubmit = () => {
+    console.log("handle submit");
+    setState(Object.assign({}, state, { submitted: true }));
+  };
+
   return (
     <>
       <div className="header">
@@ -73,6 +78,17 @@ const FindMyImpact = (props) => {
                       />
                     ))}
                   </div>
+                  {Number(state.currentQuestionId) == state.questions.length ? (
+                    <div
+                      className="submit-button"
+                      type="button"
+                      onClick={handleSubmit}
+                    >
+                      Submit
+                    </div>
+                  ) : (
+                    <></>
+                  )}
                   <div
                     className="previous-question"
                     type="button"
@@ -92,7 +108,11 @@ const FindMyImpact = (props) => {
               </div>
             </div>
           ) : (
-            <MyImpact></MyImpact>
+            <MyImpact
+              image={"/images/positive-result.svg"}
+              percentageBetter={70.8}
+              carbonFootprint={40.8}
+            ></MyImpact>
           )}
         </div>
       </div>

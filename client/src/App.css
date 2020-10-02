@@ -129,6 +129,8 @@ color: #2875B2;
 }
 
 .previous-question {
+  margin-top: 20px;
+  display: block;
   font-family: PT Sans;
 font-style: normal;
 font-weight: bold;
@@ -257,4 +259,20 @@ color: #004687;
   height: 300px;
   max-width: 300px;
 }
+
+
+.submit-button {
+font-weight: 700;
+font-size: 16px;
+line-height: 24px;
+border: 2px solid #FFF;
+background: #2875B2;
+border-radius: 100px;
+padding: 14px 14px 14px 14px; 
+color: white;
+width: 207px;
+text-align: center;
+}
+
+
 
