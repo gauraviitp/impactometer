@@ -16,7 +16,7 @@ const AppState = {
     },
     {
       id: "2",
-      text: "On average how many cups of tea/coffee do you have a day?",
+      text: "You're looking thirsty, but tell us how many cups of tea/coffee are you chugging a day?",
       options: [
         { id: "1", text: "none", percentage: 25, co2: 10 },
         { id: "2", text: "1 - 3", percentage: 25, co2: 20 },
@@ -29,7 +29,7 @@ const AppState = {
     },
     {
       id: "3",
-      text: "How many times do you use a dishwasher (weekly)?",
+      text: "Having a maid was so 1900's, anyway people tend to have a dishwasher nowadays, how often do you use it per week?",
       options: [
         { id: "1", text: "none", percentage: 25, co2: 10 },
         { id: "2", text: "1 - 3", percentage: 25, co2: 10 },
@@ -42,7 +42,7 @@ const AppState = {
     },
     {
       id: "4",
-      text: "How many washing machine loads do you do (weekly)?",
+      text: "HI'm not saying you smell.....but, how often do you use your washing machine a week?",
       options: [
         { id: "1", text: "none", percentage: 25, co2: 10 },
         { id: "2", text: "1 - 3", percentage: 25, co2: 10 },
@@ -55,7 +55,7 @@ const AppState = {
     },
     {
       id: "5",
-      text: "If you have a tumble dryer, how often do you use it (weekly)?",
+      text: "And once those clothes are all clean, if you use a tumble dryer tell us how often that is a week?",
       options: [
         { id: "1", text: "none", percentage: 25, co2: 10 },
         { id: "2", text: "1 - 3", percentage: 25, co2: 10 },
@@ -68,7 +68,7 @@ const AppState = {
     },
     {
       id: "6",
-      text: "Do you drive? If so how many miles do you drive (weekly)?",
+      text: "You're rockin' some nice wheels man, how many miles are you clocking up per week? (We mean car btw)",
       options: [
         { id: "1", text: "don't drive", percentage: 20, co2: 10 },
         { id: "2", text: "< 43", percentage: 20, co2: 10 },
@@ -82,7 +82,7 @@ const AppState = {
     },
     {
       id: "7",
-      text: "Do you have a heating thermostat?",
+      text: "This ones a quicky, do you have a heating thermostat?",
       options: [
         { id: "1", text: "yes", percentage: 50, co2: 10 },
         { id: "2", text: "no", percentage: 50, co2: 10 },
@@ -93,7 +93,7 @@ const AppState = {
     },
     {
       id: "8",
-      text: "Roughly how may halogen bulbs do you have in your home?",
+      text: "Nelly said 'It's gettin' hot in here'....but seriously how many halogen bulbs does your crib have?",
       options: [
         { id: "1", text: "none", percentage: 20, co2: 10 },
         { id: "2", text: "1 - 3", percentage: 20, co2: 10 },
@@ -121,7 +121,7 @@ const AppState = {
     },
     {
       id: "10",
-      text: "How many mobile phones do you have in your household?",
+      text: "How many mobile phones do you have in your household? (it's not an excuse to go check your insta feed!!)",
       options: [
         { id: "1", text: "none", percentage: 25, co2: 10 },
         { id: "2", text: "1 - 2", percentage: 25, co2: 10 },
@@ -134,7 +134,7 @@ const AppState = {
     },
     {
       id: "11",
-      text: "How many tablets/iPads do you have in your household?",
+      text: "How many tablets does your household have? We don't mean the prescription kind, they don't count!",
       options: [
         { id: "1", text: "none", percentage: 25, co2: 10 },
         { id: "2", text: "1 - 2", percentage: 25, co2: 10 },
@@ -147,7 +147,7 @@ const AppState = {
     },
     {
       id: "12",
-      text: "How many laptops do you have in your household?",
+      text: "How many laptops does your household have? Even if you just take them to coffee shops to look busy!",
       options: [
         { id: "1", text: "none", percentage: 25, co2: 10 },
         { id: "2", text: "1 - 2", percentage: 25, co2: 10 },
@@ -161,7 +161,7 @@ const AppState = {
     {
       id: "13",
       text:
-        "On a scale of 1-10 how often do you remember to turn off a plug that you have finished using?",
+        "How often do you remember to turn off the plug once you've finished using something? (1 = Errr NEVER! 10 = Everytime without fail obvs)",
       options: [
         { id: "1", text: "1", percentage: 10, co2: 10 },
         { id: "2", text: "2", percentage: 10, co2: 10 },
@@ -182,7 +182,7 @@ const AppState = {
     {
       id: "14",
       text:
-        "On a scale of 1-10 how often do you throw away food because it's not been eaten in time each week?",
+        "How many portions of food would you throw away a week? (Lets say a portion is 1 average UK meal....not one of those big USA feeds!)",
       options: [
         { id: "1", text: "1", percentage: 10, co2: 10 },
         { id: "2", text: "2", percentage: 10, co2: 10 },

@@ -25,12 +25,13 @@ const FindMyImpact = (props) => {
 
   return (
     <div className="container my-5">
-      <h2 className="mb-5">Find My Impact </h2>
+      <h1 className="mb-5">Find My Impact </h1>
+      <h3>This is some opening text </h3>
       {state.questions.map((question) => (
         <div key={question.id}>
           <div className="row question mt-3">
             <div className="col-sm-5">
-              <h5>{question.text}</h5>
+              <h3>{question.text}</h3>
               {question.options.map((option) => (
                 <RadioButton
                   id={`${question.id.toString()}-${option.id.toString()}`}
