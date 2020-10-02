@@ -1,6 +1,6 @@
 const AppState = {
   currentQuestionId: "1",
-  submitted: true,
+  submitted: false,
   questions: [
     // {
     //   id: "0",
