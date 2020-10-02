@@ -1,6 +1,9 @@
 const AppState = {
   currentQuestionId: "1",
   submitted: false,
+  image: "/images/positive-result.svg",
+  carbonFootPrint: 40.7,
+  percentageBetterThan: 70.8,
   questions: [
     // {
     //   id: "0",
