@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import RadioButton from "./components/RadioButton";
 import AppState from "./AppState";
 import PieChart from "./PieChart";
+import Footer from "./Footer";
 
 const FindMyImpact = (props) => {
   const initState = AppState;
@@ -87,6 +88,7 @@ const FindMyImpact = (props) => {
           </div>
         </div>
       </div>
+      <Footer />
     </>
   );
 };
