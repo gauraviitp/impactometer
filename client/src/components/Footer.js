@@ -1,63 +1,44 @@
 import React from "react";
 
 const Footer = () => (
-  <div class="gradient-footer">
-    <div class="container-fluid">
-      <div class="row">
-        <div class="col-xs-6 col-sm-6 col-md-6">
-          <ul>
-            <li role="menuitem">
-              <a
-                href="https://www.sse.co.uk/about-us/legal/terms-of-use"
-                title="Terms of use"
-              >
-                Terms of use
-              </a>
-            </li>
-            <li role="menuitem">
-              <a href="#" title="Privacy policy">
-                Privacy policy
-              </a>
-            </li>
-            <li role="menuitem">
-              <a href="#" title="Who we are">
-                Who we are
-              </a>
-            </li>
-          </ul>
+  <div className="gradient-footer">
+    <div className="container-fluid">
+      <div className="row pt-3">
+        <div className="col-xs-6 col-sm-6 col-md-6 terms">
+          <a className="terms-text" href="#">
+            Terms of use
+          </a>
+          <a className="terms-text" href="#">
+            Privacy Policy
+          </a>
+          <a className="terms-text" href="#">
+            Who we are
+          </a>
         </div>
-        <div class="col-xs-6 col-sm-6 col-md-6">
-          <ul class="socialLinks">
-            <li role="menuitem">
-              <a
-                href="@footer.TwitterIconUrl"
-                title="@footer.TwitterIconAltText"
-                target="_blank"
-                class="twitter-icon"
-              ></a>
-            </li>
-            <li role="menuitem">
-              <a
-                href="@footer.FaceBookIconUrl"
-                title="@footer.FaceBookIconAltText"
-                target="_blank"
-                class="facebook-icon"
-              ></a>
-            </li>
-            <li role="menuitem">
-              <a
-                href="@footer.YouTubeIconUrl"
-                title="@footer.YouTubeIconAltText"
-                target="_blank"
-                class="youtube-icon"
-              ></a>
-            </li>
-          </ul>
+        <div class="col-xs-6 col-sm-6 col-md-6 socialLinks">
+          <a
+            href="#"
+            title="@footer.TwitterIconAltText"
+            target="_blank"
+            class="twitter-icon"
+          ></a>
+          <a
+            href="#"
+            title="@footer.FaceBookIconAltText"
+            target="_blank"
+            class="facebook-icon"
+          ></a>
+          <a
+            href="#"
+            title="@footer.YouTubeIconAltText"
+            target="_blank"
+            class="youtube-icon"
+          ></a>
         </div>
       </div>
       <div class="row">
-        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
-          <span class="copyright">@Html.Raw(footer.Copyright)</span>
+        <div class="col-12 copyright-wrapper">
+          <span class="copyright">&copy; 2020 SSE. All rights reserved.</span>
         </div>
       </div>
     </div>

@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import RadioButton from "./components/RadioButton";
 import AppState from "./AppState";
 import PieChart from "./PieChart";
-import Footer from "./Footer";
+import Footer from "./components/Footer";
 
 const FindMyImpact = (props) => {
   const initState = AppState;
@@ -24,7 +24,10 @@ const FindMyImpact = (props) => {
     setState(
       Object.assign({}, state, {
         questions,
-        currentQuestionId: ((Number(questionId) + 1) % 15).toString(),
+        currentQuestionId: ((Number(questionId) + 1) % 15 == 0
+          ? 1
+          : (Number(questionId) + 1) % 15
+        ).toString(),
       })
     );
   };
@@ -32,9 +35,9 @@ const FindMyImpact = (props) => {
   const goToPrevious = () => {
     setState(
       Object.assign({}, state, {
-        currentQuestionId: (
-          (Number(state.currentQuestionId) - 1) %
-          15
+        currentQuestionId: ((Number(state.currentQuestionId) - 1) % 15 == 0
+          ? 14
+          : (Number(state.currentQuestionId) - 1) % 15
         ).toString(),
       })
     );

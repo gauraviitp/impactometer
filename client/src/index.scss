@@ -1,55 +1,69 @@
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+    monospace;
+}
 
 .gradient-footer {
-    background: #374551;
-    width: 100%;
-    display: block;
-    bottom: 0;
-    left: 0;
-    color: white;
+  background: #374551;
+  width: 100%;
+  display: block;
+  bottom: 0;
+  left: 0;
+  color: white;
 
-    ul {
-        list-style: none;
-        padding: 1em 0;
-        margin-top: 0;
-        margin-bottom: 0;
 
-        li {
-            padding: 0.5em 0;
+    .socialLinks {
+      float: right;
 
-            a, a:hover, a:visited {
-                color: white;
-                font-weight: normal;
-            }
-        }
+        a {
+          display: block;
+          width: 35px;
+          height: 35px;
+          color: white;
+          background-repeat: no-repeat;
 
-        &.socialLinks {
-            float: right;
-            padding-top: 5em;
+          &.twitter-icon {
+            background-image: url(/Content/Svgs/Common/twitter.svg);
+          }
 
-            li {
-                float: left;
-                padding-right: 0;
+          &.facebook-icon {
+            background-image: url(/Content/Svgs/Common/facebook.svg);
+          }
 
-                a {
-                    display: block;
-                    width: 35px;
-                    height: 35px;
-                    color: white;
-                    background-repeat: no-repeat;
-
-                    &.twitter-icon {
-                        background-image: url(/Content/Svgs/Common/twitter.svg);
-                    }
-
-                    &.facebook-icon {
-                        background-image: url(/Content/Svgs/Common/facebook.svg);
-                    }
-
-                    &.youtube-icon {
-                        background-image: url(/Content/Svgs/Common/youtube.svg);
-                    }
-                }
-            }
-        }
+          &.youtube-icon {
+            background-image: url(/Content/Svgs/Common/youtube.svg);
+          }
+        
+        
     }
+  }
+  .copyright {
+    padding-bottom: 2em;
+    padding-top: 1.4em;
+  }
+}
+
+.copyright-wrapper, .terms, .socialLinks {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.terms-text {
+    font-family: PT Sans;
+font-style: normal;
+font-weight: normal;
+font-size: 16px;
+line-height: 21px;
+
+color: #FFFFFF;
 }
