@@ -1,24 +1,24 @@
 const AppState = {
   currentQuestionId: "0",
   questions: [
-    {
-      id: "0",
-      text: "How many times a week do you run your dishwasher?",
-      options: [
-        { id: "1", text: "none", percentage: 20, co2: 10 },
-        { id: "2", text: "1 - 3 times a week", percentage: 20, co2: 10 },
-        { id: "3", text: "4 - 6 times a week", percentage: 20, co2: 20 },
-        { id: "4", text: "more than 7 times a week", percentage: 20, co2: 30 },
-      ],
-      selectedOption: "-1",
-      average: 3.5,
-      mostPopular: 3,
-      groupText: "In the kitchen",
-      tipHeading:
-        "Did you know that it takes 0.46 kg Co2 to run a dishwasher for one cycle",
-      tipText: "That's more than one tree can absorb in a year!",
-      image: "/images/in the kitchen.svg",
-    },
+    // {
+    //   id: "0",
+    //   text: "Having a maid was so 1900's, anyway people tend to have a dishwasher nowadays, how often do you use yours per week?",
+    //   options: [
+    //     { id: "1", text: "none", percentage: 20, co2: 10 },
+    //     { id: "2", text: "1 - 3 times a week", percentage: 20, co2: 10 },
+    //     { id: "3", text: "4 - 6 times a week", percentage: 20, co2: 20 },
+    //     { id: "4", text: "more than 7 times a week", percentage: 20, co2: 30 },
+    //   ],
+    //   selectedOption: "-1",
+    //   average: 3.5,
+    //   mostPopular: 3,
+    //   groupText: "In the kitchen",
+    //   tipHeading:
+    //     "Did you know that it takes 0.46 kg Co2 to run a dishwasher for one cycle",
+    //   tipText: "Collectively that's more Co2 than a mature tree can absorb in a year!",
+    //   image: "/images/in the kitchen.svg",
+    // },
     {
       id: "1",
       text: "How many people live in your household?",
@@ -32,11 +32,11 @@ const AppState = {
       selectedOption: "-1",
       average: 3.5,
       mostPopular: 3,
-      groupText: "In the kitchen",
+      groupText: "What you use",
       tipHeading:
-        "Did you know that it takes 0.96 kg Co2 to run a dishwasher for one cycle",
-      tipText: "That's more than one tree can absorb in a year!",
-      image: "/images/in the kitchen.svg",
+        "Did you know the average Co2 per person is 8340kg?",
+      tipText: "We're not saying give a family member away, it's just an interesting stat",
+      image: "/images/what you use.svg",
     },
     {
       id: "2",
@@ -51,6 +51,11 @@ const AppState = {
       selectedOption: "-1",
       average: 4,
       mostPopular: 2,
+      groupText: "What you use",
+      tipHeading:
+        "Drinking just one less hot drink per day could save 17.28kg Co2 per year",
+      tipText: "That's equivalent to driving 43 miles in an average sized car!",
+      image: "/images/what you use.svg",
     },
     {
       id: "3",
@@ -65,6 +70,11 @@ const AppState = {
       selectedOption: "-1",
       average: 3,
       mostPopular: 2,
+      groupText: "In the kitchen",
+      tipHeading:
+        "Running just one less cycle per week could save 24.11kg Co2 per year. Make sure you fill the dishwasher each time you use it, to reduce the number of cycles you need",
+      tipText: "That's more that one tree can absorb in a year!",
+      image: "/images/in the kitchen.svg",
     },
     {
       id: "4",
@@ -79,6 +89,11 @@ const AppState = {
       selectedOption: "-1",
       average: 2,
       mostPopular: 2,
+      groupText: "In the kitchen",
+      tipHeading:
+        "Running just one less load a week could save 9.26kg Co2 per year. Wait until you have enough washing to fill the machine, to reduce the number of cycles you need",
+      tipText: "That's equivalent to charging a smartphone 1185 times!",
+      image: "/images/in the kitchen.svg",
     },
     {
       id: "5",
@@ -93,6 +108,11 @@ const AppState = {
       selectedOption: "-1",
       average: 2.5,
       mostPopular: 3,
+      groupText: "In the kitchen",
+      tipHeading:
+        "Likewise running just one less cycle per week could save 55.86kg Co2 per year. Try to hang clothes outside to dry, to reduce the number of cycles you need",
+      tipText: "That's equivalent to burning through 61.5 lbs of coal!",
+      image: "/images/in the kitchen.svg",
     },
     {
       id: "6",
@@ -108,6 +128,11 @@ const AppState = {
       selectedOption: "-1",
       average: 4.5,
       mostPopular: 4,
+      groupText: "What you use",
+      tipHeading:
+        "Each mile on average creates 404g Co2, thats a whopping 80kg of Co2 a week for some of us, that'll take You'd need around 5.4 acres of mature trees to offset that",
+      tipText: "That's equivalent to burning through 61.5 lbs of coal!",
+      image: "/images/what you use.svg",
     },
     {
       id: "7",
@@ -118,12 +143,16 @@ const AppState = {
       ],
       selectedOption: "-1",
       average: 4.5,
-      mostPopular: 3,
+      groupText: "Around the home",
+      tipHeading:
+        "By reducing your thermostat by just 1 degree can save 433kg Co2 a year! And if you don't have a theromstat well who knows how much you could save!!!",
+      tipText: "That's the same as driving the safer scenic route from Land’s End to John O’Groats!",
+      image: "/images/around the home.svg",
     },
     {
       id: "8",
       text:
-        "Nelly said 'It's gettin' hot in here'....but seriously how many halogen bulbs does your crib have?",
+        "Nelly said 'It's gettin' hot in here'....but seriously though, how many halogen bulbs does your crib have?",
       options: [
         { id: "1", text: "none", percentage: 20, co2: 10 },
         { id: "2", text: "1 - 3", percentage: 20, co2: 10 },
@@ -134,6 +163,11 @@ const AppState = {
       selectedOption: "-1",
       average: 4.5,
       mostPopular: 3,
+      groupText: "Around the home",
+      tipHeading:
+        "You've felt a halogen bulb right, that heat comes from somewhere, and in return creates 0.345kg of Co2 per bulb for an 8hr day",
+      tipText: "A coal fired power station would use 172g of coal to power just one bulb",
+      image: "/images/around the home.svg",
     },
     {
       id: "9",
@@ -148,6 +182,11 @@ const AppState = {
       selectedOption: "-1",
       average: 4.5,
       mostPopular: 3,
+      groupText: "Around the home",
+      tipHeading:
+        "You're already smashing it",
+      tipText: "No nagging, just a good ol' High 5 for you!",
+      image: "/images/around the home.svg",
     },
     {
       id: "10",
@@ -162,6 +201,11 @@ const AppState = {
       selectedOption: "-1",
       average: 4.5,
       mostPopular: 3,
+      groupText: "Electronics",
+      tipHeading:
+        "A lot of people leave them charging overnight, but the phone, when plugged in, will still be running background tasks like checking emails, twitter etc.",
+      tipText: "Stopping the overnight charging could save 2kg of coal per phone, that doesn't include playing candy crush though",
+      image: "/images/electronics.svg",
     },
     {
       id: "11",
@@ -176,6 +220,11 @@ const AppState = {
       selectedOption: "-1",
       average: 4.5,
       mostPopular: 3,
+      groupText: "Electronics",
+      tipHeading:
+        "These are a classic for overnight charging in lots of households!",
+      tipText: "Stopping the overnight charging is the same as as 9 miles of average car driving a year",
+      image: "/images/electronics.svg",
     },
     {
       id: "12",
@@ -190,6 +239,11 @@ const AppState = {
       selectedOption: "-1",
       average: 4.5,
       mostPopular: 3,
+      groupText: "Electronics",
+      tipHeading:
+        "Ok, maybe not now we're all home working, but an overnight charge can result in a weighty 13.3kg of wasted Co2 a year",
+      tipText: "Shut down when not needed, not just lock it or close the lid, you'll not only reduce your Co2 but also your energy bill",
+      image: "/images/electronics.svg",
     },
     {
       id: "13",
@@ -210,8 +264,12 @@ const AppState = {
       selectedOption: "-1",
       average: 4.5,
       mostPopular: 3,
+      groupText: "What you use",
+      tipHeading:
+        "Did you know the average household wastes £80 each year through leaving appliances on standby",
+      tipText: "Turning off appliances when not in use could save 346kg Co2 per year, that's the same amount of carbon that 16 trees absorb in a year!",
+      image: "/images/what you use.svg",
     },
-
     {
       id: "14",
       text:
@@ -231,6 +289,11 @@ const AppState = {
       selectedOption: "-1",
       average: 4.5,
       mostPopular: 3,
+      groupText: "In the kitchen",
+      tipHeading:
+        "A bit harder to calculate, but if each meal was averaged it'd work out to be 70g of Co2 wasted, not to mention the waste of good food",
+      tipText: "Try being more creative and use those items before the spoil, with great resources online it's never been easier to try your culinary skills",
+      image: "/images/in the kitchen.svg",
     },
   ],
 };
