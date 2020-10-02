@@ -6,7 +6,7 @@ const RadioButton = (props) => {
       <input
         id={props.id}
         type="radio"
-        className="form-check-input"
+        className="form-check-input option"
         checked={props.checked}
         onChange={props.onSelection}
         value={props.value}

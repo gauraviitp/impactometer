@@ -20,19 +20,37 @@ const FindMyImpact = (props) => {
         questions.push(question);
       }
     }
-    setState(Object.assign({}, state, { questions }));
+    setState(
+      Object.assign({}, state, {
+        questions,
+        currentQuestionId: ((Number(questionId) + 1) % 15).toString(),
+      })
+    );
   };
 
+  const goToPrevious = () => {
+    setState(
+      Object.assign({}, state, {
+        currentQuestionId: (
+          (Number(state.currentQuestionId) - 1) %
+          15
+        ).toString(),
+      })
+    );
+  };
+
+  const question = state.questions.find(
+    (o) => o.id === state.currentQuestionId
+  );
+
   return (
-    <div className="container my-5">
-      <div class="topbar"> </div>
-      <h1 className="mb-5">Find My Impact </h1>
-      <h3>This is some opening text </h3>
-      {state.questions.map((question) => (
-        <div key={question.id}>
-          <div className="row question mt-3">
-            <div className="col-sm-5">
-              <h3>{question.text}</h3>
+    <div className="container">
+      <div className="row rectangle">
+        <div className="col-lg-6">
+          <div className="question">
+            <h3 className="group-text">{question.groupText}</h3>
+            <h4 className="question-text">{question.text}</h4>
+            <div className="option-group">
               {question.options.map((option) => (
                 <RadioButton
                   id={`${question.id.toString()}-${option.id.toString()}`}
@@ -44,49 +62,22 @@ const FindMyImpact = (props) => {
                 />
               ))}
             </div>
-            <div className="col-sm-4">
-              <PieChart
-                id={question.id}
-                options={question.options}
-                selectedOption={Number(question.selectedOption) - 1}
-              />
+            <div
+              className="previous-question"
+              type="button"
+              onClick={goToPrevious}
+            >
+              Previous question
             </div>
-            {question.selectedOption != "-1" ? (
-              <>
-                <div className="col-sm-3 pt-3">
-                  <p>
-                    Just so you know, average is{" "}
-                    <strong>{question.average}</strong>.
-                  </p>
-                  <p>
-                    Do you know, over the course of an year, it would amount to
-                    creating{" "}
-                    <strong>
-                      {
-                        question.options.find(
-                          (o) => o.id === question.selectedOption
-                        ).co2
-                      }{" "}
-                    </strong>
-                    kg of CO2.
-                  </p>
-                </div>
-              </>
-            ) : (
-              <></>
-            )}
           </div>
         </div>
-      ))}
-      <div className="row">
-        <div className="col-6">
-          <button
-            type="button"
-            class="btn btn-warning btn-lg float-right"
-            onclick="start()"
-          >
-            Submit
-          </button>
+        <div className="col-lg-6">
+          <div className="image-section">
+            <img className="image" src={question.image} alt="" />
+            <div className="tip-heading">{question.tipHeading}</div>
+
+            <div className="tip-text">{question.tipText}</div>
+          </div>
         </div>
       </div>
     </div>
